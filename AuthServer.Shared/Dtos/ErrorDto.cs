@@ -9,11 +9,11 @@ namespace AuthServer.Shared.Dtos
     public class ErrorDto
     {
         public List<String> Errors { get; private set; }
-        public bool IsShow { get; set; }
+        public bool IsShow { get; private set; }
 
         public ErrorDto()
         {
-            Errors = new List<String>();
+            Errors = new List<string>();
         }
 
         public ErrorDto(string error, bool isShow)
