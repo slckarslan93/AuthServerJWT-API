@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthServer.Core.Dtos
+namespace AuthServer.Service.Dtos
 {
     public class TokenDto
     {
