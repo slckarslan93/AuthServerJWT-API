@@ -3,6 +3,7 @@ using AuthServer.Core.Dtos;
 using AuthServer.Core.Entities;
 using AuthServer.Core.Repositories;
 using AuthServer.Core.UnitOfWork;
+using AuthServer.Service.Dtos;
 using AuthServer.Shared.Dtos;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

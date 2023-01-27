@@ -1,6 +1,7 @@
 ﻿using AuthServer.Core.Configuration;
 using AuthServer.Core.Dtos;
 using AuthServer.Core.Entities;
+using AuthServer.Service.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
