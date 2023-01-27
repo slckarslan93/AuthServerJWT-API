@@ -1,3 +1,4 @@
+using AuthServer.Core.Configuration;
 using AuthServer.Shared.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -5,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Collections.Generic;
 
 namespace AuthServerAPI
 {
@@ -21,6 +23,7 @@ namespace AuthServerAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CustomTokenOptions>(Configuration.GetSection("TokenOption"));
+            services.Configure<List<Client>>(Configuration.GetSection("Clients"));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
