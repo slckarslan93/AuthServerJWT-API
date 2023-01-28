@@ -2,11 +2,6 @@
 using AuthServer.Core.Dtos;
 using AuthServer.Core.Entities;
 using AuthServer.Service.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AuthServer.Core.Services
 {
