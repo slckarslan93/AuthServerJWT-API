@@ -6,6 +6,7 @@ using AuthServer.Core.UnitOfWork;
 using AuthServer.Data;
 using AuthServer.Service.Services;
 using AuthServer.Shared.Configuration;
+using AuthServer.Shared.Extension;
 using AuthServer.Shared.Services;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -84,6 +85,8 @@ namespace AuthServerAPI
             {
                 options.RegisterValidatorsFromAssemblyContaining<Startup>();
             });
+            services.UseCustomValidationResponse();
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
