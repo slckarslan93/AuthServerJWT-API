@@ -7,6 +7,7 @@ using AuthServer.Data;
 using AuthServer.Service.Services;
 using AuthServer.Shared.Configuration;
 using AuthServer.Shared.Services;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -77,6 +78,11 @@ namespace AuthServerAPI
                     ValidateLifetime = true,
                     ClockSkew = TimeSpan.Zero
                 };
+            });
+
+            services.AddControllers().AddFluentValidation(options =>
+            {
+                options.RegisterValidatorsFromAssemblyContaining<Startup>();
             });
 
             services.AddControllers();
